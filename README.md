@@ -1,1 +1,1 @@
-# Newcastle Presentation written using Reaveal.js
+# Newcastle Presentation written using Reveal.js
