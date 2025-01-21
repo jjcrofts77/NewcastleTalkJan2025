@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Newcastle University 23/01/2025</title>
+		
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="main.css">
+		
+	   <style>
+			{
+				box-sizing: border-box;
+			}
+			/* Set additional styling options for the columns*/
+			.column {
+			float: left;
+			width: 50%;
+			}
+
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+			<!-- ################################################### -->
+			<!-- ################################################### -->
+			<!-- ################################################### -->
+			<!-- ################################################### -->
+			<!-- ################################################### -->
+			<!-- ################################################### -->
+			<!-- ################################################### -->
+	
+			<!-- Title Slide -->
+			<section>        
+				<h2>Re-Shaping brain activity: the functional impact of brain morphology</h2>
+				<p style="font-size:48px">Jonathan J Crofts</p>        				
+				<p>Newcastle University</p>
+				<p>23rd January 2025</p>
+				<div align="center">
+					<img					
+						style="margin:0px;padding:0px;align:center"						
+						height="100"
+						data-src="images/NTUlogo2.png">								
+				</div>
+				
+			</section>
+			<!-- ################################################### -->
+			
+			
+			<!-- Outline Slide -->
+			
+			<!-- ################################################### -->  			
+			<section align="left">
+						
+				<h2>Outline</h2>
+				<br>
+				<ul>
+					<li>Introduction and Project Background</li><br>
+					<span class="fragment semi-fade-out">
+					<li> Neural Field Models</li><br>										
+					
+					<ul>
+					<li>Extensions to Curved Geometries</li>
+					<ul> 
+						<li>Torus</li>
+						<li>Rat Brain</li>
+					</ul>
+					</ul><br>
+					<!--<li>Leverhulme</li><br>-->
+					<li>Project Plan</li>
+					<br>
+					<ul> 
+						<li><b>Year 1:</b> Computational Approaches</li>
+						<li><b>Year 2:</b> Pattern Formation</li>
+						<li><b>Year 3:</b> Evolutionary Brain Dynamics</li>
+					</ul><br>
+					</span>
+				</ul>	
+				
+				
+				<aside class="notes">
+					brief outline...
+				</aside>
+		
+			</section>				
+			<!-- ################################################### -->
+						
+			
+			<!-- Introduction and Motivation-->
+			<!-- ################################################### -->  
+			<section>
+				<section align="left">
+					<h2>Motivation</h2>
+					<h3>Cortical geometry: why do we care?</h3>
+					<p>Clinical measurements</p>
+					
+					<ul>
+						<li><strong>Morphological changes</strong> including cortical thinning, white and gray matter loss and loss of gyrification are linked to range of age-related diseases</li><br>
+						<li><strong>Modern MRI techniques</strong> allow <em>in-vivo</em> measurements specific to morphological changes</li>
+					</ul>
+										
+					<p><strong>Example</strong> &nbsp; Brain shape changes associated with cerebral atrophy in Alzheimer’s disease 
+					(<a href="https://www.frontiersin.org/journals/mechanical-engineering/articles/10.3389/fmech.2021.705653/full">Blinkouskaya <em>et al.</em> <strong>2021</strong>)</a></p>
+	
+					<br>						
+					<div align="center">
+						<img
+							style="margin:0px;padding:0px;"
+							height="200"
+							data-src="images/BrainShapeChanges.png" >						
+					</div>						
+				</section>
+				
+				<section align="left">
+					<h2>The under appreciated role of cortical wave-like patterns</h2>
+					<leftSide style="width:60%;text-align:center">			
+					
+					<ul>
+						<br>
+						<li>Better understanding the role of neural patterns in the brain is crucial for a better understanding of cognition<a href="https://www.nature.com/articles/nrn.2018.20"> (Muller <em>et al.</em>, Nat. Rev. Neuro., 2018)</a></li>
+						<br>						
+						
+						<li class="fragment" fade-in data-fragment-index="1">Travelling waves shown to organise neural processes across space and time <a href="https://www.nature.com/articles/nrn.2018.20">(Zhang <em>et al.</em>, Neuron, 2018)</a>   
+						<br><br>
+						
+						<li class="fragment" fade-in data-fragment-index="2">Spiral-like, rotational wave patterns (brain spirals) are widespread during both resting and cognitive task states <a href="https://www.nature.com/articles/s41562-023-01626-5">(Xu <em>et al.</em>, Nat Hum. Behav., 2023)</a></li>
+					
+					</ul>
+						
+					
+					</leftSide>
+			
+					<rightSide style="width:40%;text-align:right">				
+					<div class="r-stack">
+						<img style="border:1px solid #000000" src="images/Paper1.png" height="450">
+						<img class="fragment" data-fragment-index="1" style="border:1px solid #000000" src="images/Paper2.png" height="450">
+						<img class="fragment" data-fragment-index="2" style="border:1px solid #000000" src="images/Paper3.png" height="495">	
+					</rightSide>					
+					</div>										
+					
+				</section>
+				
+				<section align="left">
+					<h2>How does geometry constrain function</h2>
+					
+					<br>
+					
+					<leftSide style="width:50%;text-align:center">	
+					<a href="https://www.nature.com/articles/s41586-023-06098-1">
+					<img					
+						style="margin:0px;padding:0px;align:center"						
+						height="350"
+						data-src="images/BrainEigModes.png">		
+					</a>
+					<a href="https://www.nature.com/articles/s41586-023-06098-1">Pang <em>et al</em>., Nature, 2023</a>
+					</leftSide>
+					
+					<rightSide style="width:50%;text-align:left">	
+						<ul>
+							<li style="color:white"></li> <br>
+							<li>Is geometry a more fundamental constraint than interregional connectivity?</li><br>
+							
+							<li>Study by Pang <em>et al</em> suggests dynamics results from excitation of fundamental, resonant modes - derived from the geometry <b>not</b> the connectivity</li><br>
+							
+							<li>This view is fairly controversial!</li>
+						</ul>
+					
+					</rightSide>
+										
+				</section>		
+
+				<section align="left">
+					<h2>The study by Pang raises as many questions as answers</h2>
+					<leftSide style="width:60%;text-align:center">			
+					
+					<ul>
+					
+						<li>Largely accepted that key insights are provided linking geometry and function<a href="https://www.cell.com/action/showPdf?pii=S1364-6613%2823%2900201-2"> (See Luo <em>et al.</em>, Trends in Cog. Neuro., 2023)</a></li>
+						<br>
+						<span class="fragment" fade-in data-fragment-index="1">
+						<li>However at least two 'critical' commentaries exist to date: 
+						<ul>
+							<li><a href="https://www.biorxiv.org/content/10.1101/2023.10.06.561240v1"> Patil <em>et al.</em>, 2023</a> warn that the result might be due to statistical overfitting; and</li> <br>
+							</span>
+							<li class="fragment" data-fragment-index="2"><a href="https://www.biorxiv.org/content/10.1101/2023.07.20.549785v1.full.pdf">Faskowitz <em>et al.</em>, 2023</a> further claim the model overlooks topologically complex and long-distance connectivty</li>
+						</ul>		 
+						<br>
+						<li class="fragment fade-in">Both commentaries are written by connectome-centric research groups</li>
+					
+					</ul>
+						
+					
+					</leftSide>
+			
+					<rightSide style="width:40%;text-align:right">				
+					<div class="r-stack">
+						<img style="border:1px solid #000000" src="images/Paper4.png" height="450">
+						<img class="fragment" data-fragment-index="1" style="border:1px solid #000000" src="images/Paper5.png" height="450">
+						<img class="fragment" data-fragment-index="2" style="border:1px solid #000000" src="images/Paper6.png" height="450">	
+					</rightSide>					
+					</div>										
+					
+				</section>	
+				
+				<section align="left">
+					<h2>The role of long-range connections?</h2>
+					<br>
+					<leftSide style="width:50%;text-align:center">			
+					
+					<ul>
+					
+						<li> <a>Deco <em>et al.</em>, 2025</a> emphasises the key role of long-range connections</li>						
+						<br>
+						<li>A much smaller number of modes are needed when structural connectivity information is included</li>
+						<br>						
+						<li>These studies still rely on idealised (homogeneous and highly localised) local connectivity rules</li>		 
+						<br>						
+						<li>Cortical eigenmodes are derived from the wave equation and so do not include geodesic distances</li>		 
+					
+					</ul>
+						
+					
+					</leftSide>
+			
+					<rightSide style="width:47.5%;text-align:right">				
+					<div class="r-stack">
+						<img style="border:1px solid #000000" src="images/Paper7.png" height="450">
+						<img class="fragment" data-fragment-index="1" style="border:1px solid #000000" src="images/Paper7.png" height="450">
+						<img class="fragment" data-fragment-index="2" style="border:1px solid #000000" src="images/Paper7.png" height="450">	
+					</rightSide>					
+					</div>										
+				</section>
+			</section>
+			
+			<section align="left">
+					<h2>Where do we come in?</h2>
+					<ul>
+						<li>Three year <a href="https://www.leverhulme.ac.uk/">Leverhulme</a> funded project to study the impact of cortical geometry on brain function</li><br>
+						<li>Team consists of myself, David and Neekar (plus colaborators at Newcastle University)</li><br>
+						<li>Project goals
+						<ul>
+							<li class="fragment fade-in" data-fragment-index="0">Develop novel CAD based methods for solving NFMs efficiently on curved cortical geometries</li><br>
+							<li class="fragment fade-in" data-fragment-index="1">Investigate pattern forming in NFMs on curved geometries</li>
+						</ul>
+						</li>
+						
+					</ul>
+					
+					<leftSide style="width:50%;text-align:left">
+					<br>					
+					<ul>
+						<ul>
+							<li class="fragment fade-in" data-fragment-index="2">Explore the evolutionary role of brain geometry for brain function</li>
+						</ul>
+					</ul>
+					
+					<div align="right">
+						<img src="images/BrainInflation.png" height="100" class="fragment fade-in" data-fragment-index="2">
+					</div>
+					</leftSide>
+					
+					<rightSide style="width:50%">	
+					<div align="right">
+					<a href="https://www.leverhulme.ac.uk/research-project-grants/crofts">
+					<img style="border:1px solid #000000" src="images/ProjectPic.png" height="250">
+					</a>
+					</div>
+					</rightSide>
+				</section>
+						
+			
+			<!-- Outline Slide -->
+			
+			<!-- ################################################### -->  			
+			<section align="left">
+						
+				<h2>Outline</h2>
+				<br>
+				<ul>
+					<span class="fragment semi-fade-out" data-fragment-index="0">
+					<li>Introduction and Project Background</li><br>
+					</span>
+					<li> Neural Field Models</li><br>										
+					
+					<ul>
+					<li>Extensions to Curved Geometries</li>
+					<ul> 
+						<li>Torus</li>
+						<li>Rat Brain</li>
+					</ul>
+					</ul><br>
+					<span class="fragment semi-fade-out" data-fragment-index="0">
+					<!--<li>Leverhulme</li><br>-->
+					<li>Project Plan</li>
+					<br>
+					<ul> 
+						<li><b>Year 1:</b> Computational Approaches</li>
+						<li><b>Year 2:</b> Pattern Formation</li>
+						<li><b>Year 3:</b> Evolutionary Brain Dynamics</li>
+					</ul><br>
+					</span>
+				</ul>	
+				
+				
+				<aside class="notes">
+					brief outline...
+				</aside>
+		
+			</section>				
+			<!-- ################################################### -->  			
+			<section>
+				<section align="left">
+					<h2>Neural Modelling</h2>
+					<img src="images/EEG.png" style="height:225px">
+					<img src="images/BrainWaves.png" style="height:230px">	<br><br>
+					<ul>
+						<li>There are approximately 100 billion neurons in the brain with each electrode measuring the average activity of 100s of thousands of neurons</li>
+						<span class="fragment fade-in">
+						<li>Brain dynamics commonly modelled using <b>network models</b> of the form
+						<div align="center">
+							<br>
+							<textBox>																					
+							<p>										
+							\[
+								\frac{\mathrm{d}u_i}{\mathrm{d}t} = \frac{1}{\tau_i}\left(-u_i(t) + \sum_{j=1}^N w_{ij} f(u_j(t))\right)\quad i=1,\ldots, N
+							\]						
+							</p>
+							</textBox>
+						</div>
+						</li>
+						</span>
+					</ul>
+					
+					<aside class="notes">
+					<ul>
+						<li>HH not useful for understanding large-scale nerual activity</li><br>
+						<li>For example, an EEG recorrds the average activity of neurons at each electrode - 100's of thousands...</li><br>
+						<li>HH inpractical 4*100,000 equations</li><br>
+						<li>EEGs reveal signals such as those show on the right depending on what the person is doing the frequencies differ</li><br>
+						<li>High frequency waves are related to higher levels of activity etc. slow waves are observed when observing the brain of a sleeping person</li>
+					</ul>
+					</aside>
+				
+				</section>
+				
+				<section align="left">
+				<h2>Neural Field Models</h2>
+								
+				<img src="images/NFMPic.png" style="height:325px;margin:25px">
+				
+				<p style="color:magenta">In the continuum limit the previously introduced network model becomes</p> 
+				<div align="center">
+				<textBox align="center">																					
+				<p>
+				\[
+				 \tau \frac{\partial u(x,t)}{\partial t} = -u(x,t) + \int_{-\infty}^\infty w(x,y)f(u(y,t))\mathrm{d}y
+				\]	
+				</p>	
+				</textBox>
+				</div>
+				
+				<aside class="notes">
+				<ul>
+					<li>For large populations we can assume a continuum approach</li><br>
+					<li>The relationto the previous network model is hopefully clear</li><br>
+					<li>The connectivity matrix is replaced by a connectvity kernel</li><br>
+					<li>The choice shown displays inhibitory connections to nearby neurons and excitatory connections with more distant neurons</li> <br>
+					<li>The firign rate function is again a sigmoidal function</li><br>
+					<li>The PSP is given by an alpha function which is the difference of two exponentials - this more realistic than the previously assumed exponential model</li>
+				</ul>
+				</aside>
+				
+				</section>
+				
+								<section align="left">
+					<h2>Wave Behaviour and Pattern Formation</h2>
+					<p>Complicated patterns have been observed experimentally <a href="https://link.springer.com/article/10.1007/s10827-009-0199-6">(Bressloff and Kilpatrick, 2010)</a>
+					<ul>
+						<li class="fragment fade-in" data-fragment-index="0">Spiral waves have been linked to working memory and sensory input</li><br>					
+						<li class="fragment fade-in" data-fragment-index="1">Spatially localised patterns have been observed in cortical slices</li>					
+					</ul>
+					</p>
+					<img class="fragment fade-in" data-fragment-index="0" height="200" src="images/SpiralWaves.png">	
+					<img class="fragment fade-in" data-fragment-index="1" height="275" src="images/OscillatoryPatterns.png">	
+				
+					<p class="fragment fade-in" style="color:magenta">This is related to Turing's work on pattern formation in reaction-diffusion models</p>
+					
+					<aside class="notes">
+						<ul>
+							<li>In this talk we consider simple bump patterns but models exist that admit more realistic patterns</li><br>
+							<li>We can study the genesis of such patterns using the techniques of Turing by looking at the so-called space clamped solutions</li><br>
+							<li>i.e. space-independent solutions</li>
+						</ul>
+					</aside>
+				
+				</section>
+								
+			</section>
+			<!-- ################################################### -->  			 			
+			
+			
+			<!-- ################################################### -->  			
+			<section align="left">
+				<h2>Patterns in a 2D NFM</h2>
+				<p>Consider, for example, a 2D model that includes a recovery term and is defined on $[0, L]^2$ with periodic boundary conditions</p>
+				<div align="center">
+				<textBox>																					
+				<p>
+				\[
+				 \begin{align*}
+					\frac{\partial u(x,y,t)}{\partial t}&=A\int_0^L\int_0^Lw(x-x',y-y')f(u(x',y',t)-h)\mathrm{d}x'\mathrm{d}y'\\
+					&-u(x,y,t)-a(x,y,t)\\
+					\tau\frac{\partial a(x,y,t)}{\partial t}&= Bu(x,y,t)-a(x,y,t)
+				 \end{align*}
+				\]
+				</p>
+				</textBox>
+				</div>
+				
+				<section style="margin-top:25%" align="left`">	
+				<span class="fragment fade-in">
+					<leftSide style="width:65%;text-align:left">	
+					<ul>
+						<li>The <strong style="color:red">connectivity function</strong> takes the form of a wizard's hat </li><br>
+						<li>We can transform to a travelling coordinate system to determine travelling solutions</li>
+					</ul>
+					</leftSide>
+					
+					<rightSide style="width:30%;text-align:left">	
+					<div align="center">
+						<img src="images/2DConnFunc.png">		
+					</div>
+					</rightSide>
+				</span>	
+				</section>
+				
+				<section style="margin-top:25%">	
+				
+					<leftSide style="width:45%" align="right">	
+					
+						<img height="225" src="images/TravBumpStill.png">		
+					
+					</leftSide>
+					
+					<rightSide style="width:45%" align="left">	
+					<div align="center">
+						<video height="200" autoplay loop muted controls>											
+							<source data-src="images/TravellingBump.mp4" type="video/mp4" />
+						</video>						
+					</div>
+					</rightSide>
+				</section>
+				
+				<aside class="notes">
+					<ul>
+						<li>Next we consider a 2D model that includes a recovery variable a which is driven by u</li><br>
+						<li>a repolarises u through negative feedback</li><br>
+						<li>2D FFTs are used to solve this model</li>
+					</ul>
+				</aside>
+				
+			</section>
+			<!-- ################################################### --> 						
+			
+			
+			<!-- ################################################### -->  	
+			<section>
+				<section align="left">
+					<h2>Solving NFMs on Curved Surfaces</h2>
+				
+					<p><a href="https://www.sciencedirect.com/science/article/pii/S0167278916306352">Coombes <em>et al. </em>(Physica D, 2017)</a> solved the following NFM on a sphere</p>
+				
+					<textBox align="center">		
+					\[
+						\frac{\partial u(\mathbf{r},t)}{\partial t} = -u(\mathbf{r},t)+\int_\Omega w(\mathbf{r},\mathbf{r}')f(u(\mathbf{r}',t-\tau(\mathbf{r},\mathbf{r}')))\mathrm{d}\mathbf{r}'
+					\]
+					</textBox>
+					<p style="color:magenta">This is the so-called Nunez model</p>				
+					<ul>
+						<li>$\Omega:=S^2$ is the surface of the unit sphere in $\mathbb{R}^3$</li>
+						<li>$w(\mathbf{r},\mathbf{r}')$ is the weight distribution, $f$ the firing rate function and $\tau(\mathbf{r},\mathbf{r}')$ specifies distance-dependent delays</li>
+					</ul>
+					<br>
+				
+					<span class="fragment fade-in">
+					<leftSide style="width:50%" align="center">	
+						<div align="center">
+							<img src="images/ShinyDiscoBalls.png" height="175" style="padding:10px">								
+						</div>
+					</leftSide>
+				
+					<rightSide style="width:50%" align="left">	
+					<br>				
+					<ul>
+						<li>Solutions can be represented by <strong style="color:red">spherical harmonics</strong></li><br>
+						<li><strong style="color:green">Geodesic distances</strong> are known</li>
+					</ul>
+					</rightSide>
+					</span>
+				
+					<aside class="notes">
+						<ul>
+							<li>We wish to consider NFMs on curved geometries</li><br>
+							<li>To date the sphere is the only such geometry that has been studied</li><br>
+							<li>Advantages are that solutions can be expanded in spherical harmonics</li><br>
+							<li>And geodesics can be computed analytically</li>
+						</ul>
+					</aside>
+				
+				</section>
+				
+				<section align="left">
+					<h2>Geodesic Distances</h2>
+					<p>For a general surface the computation of geodesics reqiures numerical algorithms</p>
+					<div align="center">
+					<img src="images/Rabbit.png" height="150" style="padding:35px">
+					<img src="images/Elephant.png" height="200" style="padding:0px">
+					<img src="images/FoldedBrainHeatDist.png" height="150" style="padding:35px">
+					</div>
+					<p>A large class of methods are based on formulating the problem in terms of a related PDE on a smooth surface</p>
+					<span class="fragment fade-in">
+					<p>This typically results in the need to solve the so-called <a href="https://en.wikipedia.org/wiki/Eikonal_equation">Eikonal equation</a>:</p>					
+					\[
+						\begin{align*}
+							|\nabla\phi|^2 &= 1\quad \text{on } M\\
+							\phi &= 0 \quad \text{on } \partial M 
+						\end{align*}
+					\]					
+					<p>where $\phi:M\longrightarrow \mathbb{R}$ is the <strong style="color:green">distance function</strong></p>
+					</span>
+					
+					<aside class="notes">
+						<ul>
+							<li>The figures show isolines from a target point or points for a rabbit, elephant and brain...</li><br>
+							<li>These methods all involve some sort of procedure for solving the Eikonal equation</li><br>
+							<li>Fortunately packages exist that already for his for us...</li>
+						</ul>
+					</aside>
+					
+				</section>
+				
+				<section align="left">
+					<h2>Geodesic Distances</h2>
+					<p>In the current work we deployed the MMP <a href="https://epubs.siam.org/doi/abs/10.1137/0216045">(Mitchell, Mount and Papadimitriou, 1987)</a> algorithm which is implemented in MATLAB within 
+					the <a href="https://uk.mathworks.com/matlabcentral/fileexchange/18168-exact-geodesic-for-triangular-meshes" style="color:green">exact geodesic toolbox</a></p>
+					
+					<p>It works by simulating the continuous propagation of a wave front of points equidistant from a source point $s$ until the target $t$ is reached</p>
+					<leftSide style="width:40%" align="center">	
+					<div align="center">
+						<img src="images/MoreGeodesicPics.png" height="425" style="padding:0px">								
+					</div>
+					</leftSide>
+				
+					<rightSide style="width:60%" align="left">	
+					<br><br><br>				
+					<ul>
+						<li>Figure shows isolines of the distance function computed using the MMP algorithm</li><br>
+						<li>The algorithm is often referred to as the <em>continuous Dijkstra</em> algorithm</li><br>
+						<li>Often the algorithm runs much faster than the suggested worst case analysis</li>
+					</ul>
+					</rightSide>
+					</span>
+					
+					<aside class="notes">
+						<ul>
+							<li>In our work we use the MMP algorithm which has been coined the continuous dijkstra</li><br>
+							<li>Just to avoid any confusion this is Michaelangelo's David and David Chappell's role in the project has been strictly in an advisory role</li>
+						</ul>
+					</aside>
+				
+				</section>
+			</section>
+			<!-- ################################################### -->  	
+			
+			
+			<!-- ################################################### -->  		
+			<section>
+				<section align="left">
+					<h2>Torus</h2>
+					<div>
+					<leftSide style="width:40%" align="center">	
+					<div align="center">
+					<img src="images/TorusParam.png" height="300" style="padding:0px">								
+					</div>
+					</leftSide>
+				
+					<rightSide style="width:60%" align="left">	
+					<ul>
+						<li>Simplest example of a surface for which analytic geodesics are unavailable</li><br>
+						<li>We parameterise the torus as follows:</li>
+						\[
+						\left(\theta, \phi\right) \mapsto \left(\begin{array}{c} (R+r\cos{\theta})\cos{\phi}\\(R+r\cos{\theta})\sin{\phi}\\r\sin{\theta} 
+						\end{array}\right) = \left(\begin{array}{c}x\\y\\z 
+						\end{array}\right)
+						\]<br>
+						<li>Here, $R$ and $r$ are respectively the major and minor curvature radii</li><br>
+						<li>We can not use FFTs as we no longer have a convolution integral</li>
+					</ul>
+					</rightSide>
+					</div>
+					<br>
+				
+					<div>
+						<a style="color:white">e rjiojfqerjvqeiwwww wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</a><br>
+						<p style="color:magenta" class="fragment fade-in">To solve our NFM on $\Omega:=\mathbb{T}^2$ we must rewrite it in terms of the above parameterisation</p>
+					</div>			 	
+					
+					<aside class="notes">
+						<ul>
+							<li>NFM has never been solved on a Torus!</li>
+						</ul>
+					</aside>
+					
+				</section>
+				
+				<section align="left">
+					<h2>Torus</h2>
+					<p>In the new coordinates the <strong style="color:green">Amari equation</strong> becomes</p>
+					<textBox align="center">	
+					\[						
+						\frac{\partial u(\theta,\phi)}{\partial t} =  -u(\theta,\phi)+
+						A\int_0^{2\pi}\int_0^{2\pi} w((\theta,\phi),(\theta',\phi'))f\left(u(\theta',\phi')-h\right)r(R+r\cos{\theta'})\mathrm{d}\theta'\mathrm{d}\phi'									
+					\]
+					</textBox>
+					<p>The surface area element for the torus is given by</p>
+					\[
+					\mathrm{d}\Omega = r\left(R+r\cos\theta\right)\mathrm{d}\theta\mathrm{d}\phi
+					\]
+					<p>And the connectivity function is taken to have the form </p>
+					<div align="center">
+					<textBox>
+					\[
+						w(\mathbf{x},\mathbf{x}') = e^{-d(\mathbf{x},\mathbf{x}')^2} - 0.17e^{-0.2d(\mathbf{x},\mathbf{x}')^2}
+					\]
+					</textBox>
+					</div>
+				
+					<p style="color: magenta" class="fragment fade-in">We wish to solve the above NFM numerically...</p>
+					
+					<aside class="notes">
+						<ul>
+							<li>Importantly in this case the distance function has to be computed numerically</li><br>
+						</ul>
+					</aside>
+					
+				</section>
+				
+				<section align="left">
+					<h2>Torus: Connectivity</h2>
+					<ul>
+						<li>MMP algorithm applied to the Torus</li>
+					</ul>
+					<div align="center">
+						<img src="images/MMP_Torus.png" height="300" style="padding:0px">								
+						<img src="images/DistMat.png" height="200" style="padding:50px">								
+					</div>
+					<br>
+					<span class="fragment fade-in">
+					<leftSide style="width:60%" align="center">	
+					<ul>				
+						<li>Wizard hat connectivity kernel</li>
+						<br>
+						<textBox>
+						\[
+							w(\mathbf{x},\mathbf{x}') = e^{-d(\mathbf{x},\mathbf{x}')^2} - 0.17e^{-0.2d(\mathbf{x},\mathbf{x}')^2}
+						\]
+						</textBox>
+					</ul>
+					</leftSide>
+				
+					<rightSide style="width:40%" align="center">	
+					<img src="images/WizardsHat.png" height="150" style="padding:0px">								
+					</rightSide>
+					</span>
+					
+					<aside class="notes">
+						<ul>
+							<li>The first picture shows a heat map representing distance from a fixed point on the inner meridian with brighter colours representing points further away</li><br>
+							<li>The heatmap is a representation of the distance matrix with the (i,j) element giving the distance between nodes i and j on the torus - cmoputed using the MMP algorithm</li><br>
+							<li>Side profile of the connectivity function gives it its name</li><br>
+							<li>The wizard hat profile is an idealised connectivity function; our approach allows more general (physiologically realistic) connectivity functions</li>
+						</ul>
+					</aside>
+					
+				</section>
+												
+				<section align="left">
+					<h2>Torus: Solutions</h2>
+					<p>Stationary bump solutions for the Amari equation</p>
+				
+					<div align="center">
+						<img src="images/TorusBumpSolutions.png" height="400" style="padding:0px">								
+					</div>
+					
+					<leftSide style="width:60%" align="center">	
+						<p><strong>Top:</strong> trapezoidal (LHS); linear collocation (RHS)</p>
+						<p><strong>Bottom:</strong> linear collocation on an irregular mesh</p>
+					</leftSide>
+					
+					<rightSide style="width:40%" align="center">	
+						<img src="images/TorusICs.png" height="100" style="padding:20px">				
+					</rightSide>
+					
+					<aside class="notes">
+						<ul>
+							<li>Here we present three sets of results: stationary bump solutions</li><br>
+							<li>These solutions were obtained via direct integration and so represent stable solutions</li><br>
+							<li>The initial conditions for each result are shown in the bottom left figure</li><br>
+							<li>In the top figures a regular grid is used: trapezoidal (LHS); linear collocation (RHS) (of each figure)</li><br>
+							<li>In the bottom figure we show LC for an irregular grid - this important because beyond the torus we won't have access to regular grids</li>							
+						</ul>
+					</aside>
+				</section>
+			</section>	
+			<!-- ################################################### -->  								
+			
+			
+			<!-- ################################################### -->  	
+			<section>
+				<section align="left">
+					<h2>Travelling Bumps on a Torus</h2>
+				
+					<p>As in the planar case, including a recovery variable enables us to observe travelling bump solutions</p>
+				
+					<leftSide style="width:60%" align="left">						
+						<img src="images/TorusTravellingSol.png" height="350" style="padding:0px">													
+					</leftSide>
+					
+					<rightSide style="width:40%" align="right">	
+					<div align="center">
+						<video height="300" style="padding: 40px" autoplay loop muted controls>				
+							<source data-src="images/TravellingBumpTorus.mp4" type="video/mp4" />
+						</video>						
+					</div>
+					</rightSide>
+								
+					<p style="color:magenta" class="fragment fade-in">As with the 2D planar case, we can study the impact of parameter variation on travelling bump solutions by moving to a travelling coordinate system ...</p>
+					
+					<aside class="notes">
+						<ul>
+							<li>Picture shows snapshots of a travelling bump solution on the outer equator</li><br>
+							<li>Video inner solution</li><br>
+							<li>Bifurcation analysis of travelling bump not performed to date</li><br>
+							<li>Note: both solutions are travelling along geodesics at constant speed and constant curvature</li>
+						</ul>
+					</aside>
+					
+				</section>				
+				
+				<section align="left">
+					<h2>Travelling Bumps on a Torus</h2>
+					<div align="center">
+						<img src="images/TorusBumpPath.png" height="300" style="padding:0px">								
+					</div>
+					<ul>
+						<li>Solutions to date have been along geodesics moving with constant speed and curvature</li>
+						<li>Travelling bumps along <strong style="color:green">non-geodesics</strong>:</li>
+						<ul>
+							<li class="fragment fade-in">travel with variable speed</li>
+							<li class="fragment fade-in">are unable to pass through the inner meridian - the region of greatest negative curvature</li>
+						</ul>
+						<li class="fragment fade-in">Solutions along meridian geodesics pass through the inner equator unhindered</li>
+					</ul>
+					
+					<aside class="notes">
+						<ul>
+							<li>We can change the initial direction of travel by changing a0</il><br>
+							<li>Non-geodesic trajectories are traversed at non-constant speeds - curvature impacts speed</li><br>
+							<li>Unbale to pass through the inner merdian</li><br>
+							<li>Regions of negative curvature appear to act as a barrier</li><br>
+							<li>More experiments necessary to confirm/tighten these results</li><br>
+							<li>Curvature: Gaussian given by the product of the principal curvatures</li>
+						</ul>	
+					</aside>	
+				
+				</section>
+			</section>
+			<!-- ################################################### -->  	
+			
+			
+			<!-- ################################################### -->  				
+			<section align="left">
+				<h2>Rat Brain</h2>
+				<p>We next solved the NFM, including a recovery variable, on the cortical surface of the rat brain</p>
+				
+				<section style="margin-top:9.5%" align="left`">	
+							
+					<leftSide style="width:60%" align="left">						
+					<ul><li>NFM:
+						<div align="center" style="font-size: 20px">
+						<textBox>
+						\[
+						\begin{align*}
+						\frac{\partial u(\mathbf{x},t)}{\partial t} &= A\int_\Omega w(\mathbf{x},\mathbf{x}')f(u(\mathbf{x},t)-h)\mathrm{d}\Omega(\mathbf{x}')\\
+							&-u(\mathbf{x},t)-a(\mathbf{x},t)\\
+						\frac{\partial a(\mathbf{x},t)}{\partial t} &= Bu(\mathbf{x},t)-a(\mathbf{x},t)
+						\end{align*}
+						\]
+						</textBox>
+						</div>
+						</li>
+						<li class="fragment fade-in" data-fragment-index="0">Spatial coordinates of the rat cortex were obtained from the <a href="https://www.nitrc.org/projects/caret/">CARET</a> software package</li><br>					
+						<li class="fragment fade-in" data-fragment-index="0">$\Omega$ is the cortical surface $\longrightarrow$</li><br>					
+						<li class="fragment fade-in" data-fragment-index="0">Discretised system of $N=9623$ ODEs</li>
+						
+						<p style="color:magenta" class="fragment fade-in"><strong>Note:</strong> we solve with linear collocation here...</p>
+					</ul>	
+					</leftSide>
+					
+					<rightSide style="width:40%" align="right">	
+					
+					<div align="center">
+						<img src="images/RatBrainTri.png" height="250" style="padding:100px" class="fragment" data-fragment-index="0">													
+					</div>
+					</rightSide>
+								
+					
+				
+				</section>
+				
+				<section style="margin-top:7.55%" align="left`">	
+					<leftSide style="width:75%" align="left">
+						<div align="center">
+							<img src="images/RatBrainSol.png" height="550" style="padding:0px">				
+						</div>
+					</leftSide>
+					
+					<rightSide style="width:25%" align="left">
+						
+						<div style="font-size:15px">
+						<ul>
+							<li>Two different types of solution observed</li><br>
+							<li class="fragment fade-in">Solutions travelled along non-geodesic trajectories</li><br>
+							<li class="fragment fade-in">Travelling bumps slow or even divert in regions of negative curvature</li><br>
+							<li class="fragment fade-in">The recent study by <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2015.00029/full">Kroos et al, 2015</a> found brain regions that trapped propagating waves...</li><br>
+							<li class="fragment fade-in">Such regions are potential targets for modulation </li>
+						</ul>
+						
+						<div align="right">
+						<video height="150" style="padding: 40px" autoplay loop muted controls>				
+							<source data-src="images/TravellingRatBump2.mp4" type="video/mp4" />
+						</video>						
+					</div>
+					</rightSide>						
+				</section>
+				
+				<aside class="notes">
+					<ul>
+						<li>trapping regions - areas of negative Gaussian curvature</li><br>
+						<li>trapping regions as potential targets for neuromodulation in depression</li>
+					</ul>
+				</aside>				
+				
+			</section>
+			<!-- ################################################### -->  				
+			
+
+			<!-- ################################################### -->  			
+			<section align="left">
+						
+				<h2>Outline</h2>
+				<br>
+				<ul>
+					<span class="fragment semi-fade-out" data-fragment-index="0">
+					<li>Introduction and Project Background</li><br>
+					
+					<li> Neural Field Models</li><br>										
+					
+					<ul>
+					<li>Extensions to Curved Geometries</li>
+					<ul> 
+						<li>Torus</li>
+						<li>Rat Brain</li>
+					</ul>
+					</ul><br>
+					</span>
+					<!--<li>Leverhulme</li><br>-->
+					<li>Project Plan</li>
+					<br>
+					<ul> 
+						<li><b>Year 1:</b> Computational Approaches</li>
+						<li><b>Year 2:</b> Pattern Formation</li>
+						<li><b>Year 3:</b> Evolutionary Brain Dynamics</li>
+					</ul><br>					
+				</ul>	
+				
+				
+				<aside class="notes">
+					brief outline...
+				</aside>
+		
+			</section>				
+			<!-- ################################################### -->  
+	
+			
+			<!-- Project Plan-->
+			
+						<!-- ################################################### -->  			
+			<section>
+			
+				<section align="left">
+				<h2><b>Year 1:</b> Computational Approaches</h2>
+				<p>	
+				Develop <b>isogeometric collocation</b> (IGA-C) methods that use CAD geomerty techniques to accurately solve NFMs on on complex geometries</p>
+								
+				<div>
+				<leftSide style="width:57.5%" align="left">
+				<br>
+				<ul>
+					<li><b>NURBS modelling</b> provides a smooth realistic representation of the cortical surface</li><br>
+					<li class="fragment" data-fragment-index="0">IGA-C is a numerical method that deploys the <em>same</em> NURBS basis functions describing the geometry to approximate neural activity</li><br>
+					<li class="fragment" data-fragment-index="0">These methods have been previously applied to models in mechanics and acoustics</li><br>
+					<li class="fragment" data-fragment-index="0">First application within a neuroscience setting</li>
+				</ul>
+				</leftSide>
+				
+				<rightSide style="width:40%" align="right">				
+					<img src="images/NURBSurfaces.png" height="200" style="padding:25px">													
+					<img src="images/BrainsActivity.png" height="100" style="padding:25px" class="fragment" data-fragment-index="0">																	
+				</rightSide>
+				<p style="color:white">The aim of this package is hello the rertpackage is hello the rertpackage is hello the rertrertpackage is hello the rert</p>
+				</div>
+				
+				<div align="LEFT">
+				<p style="color:magenta"class="fragment" data-fragment-index="1"><b>Aim:</b> develop efficient IGA-C scheme for generic connectivity kernels on complex geometries</p>
+				</div>
+				</section>
+				
+				<section align="left">
+				<h2><b>Year 2:</b> Pattern Formation</h2>
+				<p>Reveal the extent to which curvature impacts solution structure of <b>non-local models</b> by performing a computational bifurcation and stability analysis</p>
+				
+				<div>
+				<leftSide style="width:57.5%" align="left">
+				<br>
+				<ul>
+					<li>Reveal novel mechanisms underlying pattern formation in curved domains</li><br>
+					<li class="fragment" data-fragment-index="0">We shall consider toy geometries such as the torus for which <b>geodesic distances are unavailable</b></li><br>
+					<li class="fragment" data-fragment-index="0">Curvature-induced properties (<em>e.g.</em> static Vs moving patterns)</li><br>
+					<li class="fragment" data-fragment-index="0">First application to <b>non-local models on curved domains</b></li>
+				</ul>
+				</leftSide>
+				
+				<rightSide style="width:40%" align="right">				
+					<img src="images/TuringPatterns.png" height="125" style="padding:25px">													
+					<img src="images/Patterns.png" height="200" style="padding:25px" class="fragment" data-fragment-index="0">																	
+				</rightSide>
+				<p style="color:white">The aim of this package is hello the rertpackage is hello the rertpackage is hello the rertrertpackage is hello the rert</p>
+				</div>
+				
+				<div align="LEFT">
+				<p style="color:magenta"class="fragment" data-fragment-index="1"><b>Aim:</b> elucidate novel mechanisms for generating patterns</p>
+				</div>
+				</section>
+				
+				<section align="left">
+				<h2><b>Year 3:</b> Evolutionary Brain Dynamics</h2>
+				
+				<p>Perform model-based studies of complex experiments to determine the effect of the cortical geometry on mechanisms of wave formation, propagation and termination</p> 
+				<div>
+				<leftSide style="width:57.5%" align="left">
+				<br>
+				<ul>
+					<li>How do evolutionary changes in brain shape impact wave dynamics?</li><br>
+					<li>Can we isolate spatial scales that support emergent neural activity patterns of relevance to brain function?</li><br>
+					<li class="fragment" data-fragment-index="0">Investigate the <b>effect of connection heterogeneity on wave propagation</b> in our model, comparing results 
+					to an isotropic neural model</b></li>
+				</ul>
+				</leftSide>
+				
+				<rightSide style="width:40%" align="right">				
+					<img src="images/BrainInflation.png" height="125" style="padding:25px">													
+					<img src="images/LongDistanceRules.png" height="175" style="padding:25px;border:1px solid #000000" class="fragment" data-fragment-index="0">																	
+				</rightSide>
+				<p style="color:white">The aim of thisTheThe aim of thisThe aim of this aim of thisThe aim of this package is hello the rertpackage is hello the rertpackage is hello the rertrertpackage is hello the rert</p>
+				</div>
+				
+				<div align="LEFT">
+				<p style="color:magenta"class="fragment" data-fragment-index="1"><b>Aim: investigate the role of geometry in the evolutionary shaping of brain function</b></p>
+				</div>
+				</section>			
+				
+				<section align="left">
+					<h2>Aknowledgements</h2>
+					
+					<leftSide style="width:50%;text-align:left">														
+						<h1 style="color:black">Collaborators <br> & Thank You!</h1>
+					
+						<br><br><br>
+						<p align="center"><mark>PHD student : Rebecca Martin</mark></p>
+						
+						
+						<h2>References</h2>
+						<ul>
+							<li><a href="https://irep.ntu.ac.uk/id/eprint/31466/">Martin <em>et al.</em>, UKBIM 11, 2017</a></li>
+							<li><a href="https://link.springer.com/article/10.1007/s10827-018-0697-5">Martin <em>et al.</em>, J Comp. Neuro., 2018</a></li>
+						</ul>
+					</leftSide>
+						
+					<rightSide style="width:40%;text-align:left">			
+						<img
+						style="margin:0px;padding:0px;align:center"
+						data-src="images/Chappell.png" width="200" height="auto">										
+						<br><br><br>
+						<img
+						style="margin:0px;padding:0px;align:center"
+						data-src="images/Martin.png" width="200" height="auto">
+														
+					</rightSide>																		
+					
+				</section>							
+			
+			</section>												
+
+		</div>
+
+	</div>
+
+	<script src="./dist/reveal.js"></script>
+	<script src="./plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	
+	<script>
+		Reveal.initialize({			
+			center: true,
+			hash: true,			
+			plugins: [ RevealHighlight, RevealMath.KaTeX, RevealNotes, RevealZoom ],	
+			autoAnimateStyles: ['absolute']
+		});
+	</script>
+
+	</body>
+	
+</html> 
