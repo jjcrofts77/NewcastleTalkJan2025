@@ -123,7 +123,13 @@
 							style="margin:0px;padding:0px;"
 							height="200"
 							data-src="images/BrainShapeChanges.png" >						
-					</div>						
+					</div>		
+
+
+					<aside class="notes">
+						Read ...
+					</aside>
+					
 				</section>
 				
 				<section align="left">
@@ -151,7 +157,11 @@
 						<img class="fragment" data-fragment-index="1" style="border:1px solid #000000" src="images/Paper2.png" height="450">
 						<img class="fragment" data-fragment-index="2" style="border:1px solid #000000" src="images/Paper3.png" height="495">	
 					</rightSide>					
-					</div>										
+					</div>		
+
+					<aside class="notes">
+						Travelling waves and patterns are increasingly believed to play a role in cognition
+					</aside>
 					
 				</section>
 				
@@ -181,6 +191,14 @@
 						</ul>
 					
 					</rightSide>
+					
+					<aside class="notes">
+						<ul>
+						 <li>Accurately recreate neural activity using so-called geometric eigenmodes (local connectivity and curvature) as bases functions</li><br>
+						 <li>Compared against eigenmodes based on connectomes (local, and short- and long-range connections) and EDRs (stochastic exponentially decaying connectivity)</li><br>
+						 <li>The success of the geometric eigenmodes is argued as evidence for the role of wave dynamics in shaping cortical activity</li>
+						</ul>
+					</aside>
 										
 				</section>		
 
@@ -215,6 +233,14 @@
 					</rightSide>					
 					</div>										
 					
+					<aside class="notes">
+						<ul>
+						 <li>statistical overfitting - some 200 eigenmodes used in recreating activity</li><br>						 
+						 <li>other bases (arbitrary) shown to do an excellent job</li><br>
+						 <li>long distance connections over looked</li>
+						</ul>
+					</aside>
+					
 				</section>	
 				
 				<section align="left">
@@ -243,7 +269,16 @@
 						<img class="fragment" data-fragment-index="1" style="border:1px solid #000000" src="images/Paper7.png" height="450">
 						<img class="fragment" data-fragment-index="2" style="border:1px solid #000000" src="images/Paper7.png" height="450">	
 					</rightSide>					
-					</div>										
+					</div>		
+
+					<aside class="notes">
+						<ul>
+						 <li>EDR + LR model</li><br>
+						 <li>The fundamental role of LR connections ignored in previous studies</li><br>	
+						 <li>EDR+LR > geometry</li>
+						</ul>
+					</aside>					
+					
 				</section>
 			</section>
 			
@@ -281,6 +316,12 @@
 					</a>
 					</div>
 					</rightSide>
+					
+					<aside class="notes">
+						Read ...
+					</aside>
+					
+					
 				</section>
 						
 			
@@ -348,11 +389,10 @@
 					
 					<aside class="notes">
 					<ul>
-						<li>HH not useful for understanding large-scale nerual activity</li><br>
-						<li>For example, an EEG recorrds the average activity of neurons at each electrode - 100's of thousands...</li><br>
-						<li>HH inpractical 4*100,000 equations</li><br>
-						<li>EEGs reveal signals such as those show on the right depending on what the person is doing the frequencies differ</li><br>
-						<li>High frequency waves are related to higher levels of activity etc. slow waves are observed when observing the brain of a sleeping person</li>
+						<li>Large scale modelling typically based on network methods</li><br>
+						<li>Neural activity is described by a system of differential equations which are coulped via an adjacency matrix</li><br>
+						<li>Typically of the order of 100s nodes</li><br>
+						<li>Describe equation ...</li><br>						
 					</ul>
 					</aside>
 				
@@ -380,8 +420,7 @@
 					<li>The relationto the previous network model is hopefully clear</li><br>
 					<li>The connectivity matrix is replaced by a connectvity kernel</li><br>
 					<li>The choice shown displays inhibitory connections to nearby neurons and excitatory connections with more distant neurons</li> <br>
-					<li>The firign rate function is again a sigmoidal function</li><br>
-					<li>The PSP is given by an alpha function which is the difference of two exponentials - this more realistic than the previously assumed exponential model</li>
+					<li>w(i,j) LR but w(x,y) local connectivity  - so a bit of a disconnect; this is a mathematical convenience</li>					
 				</ul>
 				</aside>
 				
@@ -402,7 +441,7 @@
 					
 					<aside class="notes">
 						<ul>
-							<li>In this talk we consider simple bump patterns but models exist that admit more realistic patterns</li><br>
+							<li>Neural field models exhibit travelling waves as well as more complicated patterns</li><br>
 							<li>We can study the genesis of such patterns using the techniques of Turing by looking at the so-called space clamped solutions</li><br>
 							<li>i.e. space-independent solutions</li>
 						</ul>
@@ -447,6 +486,18 @@
 					</div>
 					</rightSide>
 				</span>	
+				
+				<aside class="notes">
+						<ul>
+						 <li>A typical 2-D neural field model looks as follows</li><br>
+						 <li>This is set on a planar domain as is typical</li><br>
+						 <li>The inclusion of a recovery variable leads to travelling patterns</li><br>
+						 <li>Next we consider a 2D model that includes a recovery variable a which is driven by u</li><br>
+						<li>a repolarises u through negative feedback</li><br>
+						<li>2D FFTs are used to solve this model</li>
+						</ul>
+					</aside>
+				
 				</section>
 				
 				<section style="margin-top:25%">	
@@ -466,13 +517,7 @@
 					</rightSide>
 				</section>
 				
-				<aside class="notes">
-					<ul>
-						<li>Next we consider a 2D model that includes a recovery variable a which is driven by u</li><br>
-						<li>a repolarises u through negative feedback</li><br>
-						<li>2D FFTs are used to solve this model</li>
-					</ul>
-				</aside>
+				
 				
 			</section>
 			<!-- ################################################### --> 						
@@ -622,7 +667,9 @@
 					
 					<aside class="notes">
 						<ul>
-							<li>NFM has never been solved on a Torus!</li>
+							<li>NFM had never previously been solved on a Torus</li><br>
+							<li>To solve we need to change variables as follows ...</li><br>
+							<li>standard methods used on the plane aren't applicable here</li>
 						</ul>
 					</aside>
 					
@@ -654,7 +701,9 @@
 					
 					<aside class="notes">
 						<ul>
-							<li>Importantly in this case the distance function has to be computed numerically</li><br>
+							<li>We solved this PIDE using a projection method known as collocation - extremely flexible with regards to domain complexity</li> <br>
+							<li>we also solved using finite differences and trapezoidal method in the case of a regular grid</li><br>							
+							<li>Importantly in this case the distance function has to be computed numerically</li>
 						</ul>
 					</aside>
 					
@@ -691,7 +740,7 @@
 					<aside class="notes">
 						<ul>
 							<li>The first picture shows a heat map representing distance from a fixed point on the inner meridian with brighter colours representing points further away</li><br>
-							<li>The heatmap is a representation of the distance matrix with the (i,j) element giving the distance between nodes i and j on the torus - cmoputed using the MMP algorithm</li><br>
+							<li>The heatmap is a representation of the distance matrix with the (i,j) element giving the distance between nodes i and j on the torus - computed using the MMP algorithm</li><br>
 							<li>Side profile of the connectivity function gives it its name</li><br>
 							<li>The wizard hat profile is an idealised connectivity function; our approach allows more general (physiologically realistic) connectivity functions</li>
 						</ul>
@@ -720,9 +769,9 @@
 						<ul>
 							<li>Here we present three sets of results: stationary bump solutions</li><br>
 							<li>These solutions were obtained via direct integration and so represent stable solutions</li><br>
-							<li>The initial conditions for each result are shown in the bottom left figure</li><br>
+							<li>The initial conditions for each result are shown in the bottom right figure</li><br>
 							<li>In the top figures a regular grid is used: trapezoidal (LHS); linear collocation (RHS) (of each figure)</li><br>
-							<li>In the bottom figure we show LC for an irregular grid - this important because beyond the torus we won't have access to regular grids</li>							
+							<li>In the bottom figure we show LC for an irregular grid - this important because beyond the torus we won't have access to regular grids (point clouds)</li>							
 						</ul>
 					</aside>
 				</section>
@@ -779,9 +828,9 @@
 					
 					<aside class="notes">
 						<ul>
-							<li>We can change the initial direction of travel by changing a0</il><br>
+							<li>We can change the initial direction of travel by changing a0</li><br>
 							<li>Non-geodesic trajectories are traversed at non-constant speeds - curvature impacts speed</li><br>
-							<li>Unbale to pass through the inner merdian</li><br>
+							<li>Unable to pass through the inner merdian</li><br>
 							<li>Regions of negative curvature appear to act as a barrier</li><br>
 							<li>More experiments necessary to confirm/tighten these results</li><br>
 							<li>Curvature: Gaussian given by the product of the principal curvatures</li>
@@ -829,7 +878,12 @@
 					</div>
 					</rightSide>
 								
-					
+					<aside class="notes">
+						<ul>
+							<li>We solve using linear collocation</li><br>
+							<li>Finite differences and trapezoidal unavailable now</li><br>							
+						</ul>	
+					</aside>								
 				
 				</section>
 				
@@ -857,14 +911,16 @@
 						</video>						
 					</div>
 					</rightSide>						
-				</section>
-				
-				<aside class="notes">
+					
+					<aside class="notes">
 					<ul>
 						<li>trapping regions - areas of negative Gaussian curvature</li><br>
 						<li>trapping regions as potential targets for neuromodulation in depression</li>
 					</ul>
-				</aside>				
+					</aside>				
+				
+				</section>
+								
 				
 			</section>
 			<!-- ################################################### -->  				
@@ -897,12 +953,7 @@
 						<li><b>Year 2:</b> Pattern Formation</li>
 						<li><b>Year 3:</b> Evolutionary Brain Dynamics</li>
 					</ul><br>					
-				</ul>	
-				
-				
-				<aside class="notes">
-					brief outline...
-				</aside>
+				</ul>									
 		
 			</section>				
 			<!-- ################################################### -->  
@@ -910,7 +961,7 @@
 			
 			<!-- Project Plan-->
 			
-						<!-- ################################################### -->  			
+			<!-- ################################################### -->  			
 			<section>
 			
 				<section align="left">
@@ -939,6 +990,16 @@
 				<div align="LEFT">
 				<p style="color:magenta"class="fragment" data-fragment-index="1"><b>Aim:</b> develop efficient IGA-C scheme for generic connectivity kernels on complex geometries</p>
 				</div>
+				
+				
+				<aside class="notes">
+					<ul>
+						<li>No need for separate mesh generation as is typically the case with finite element methods</li><br>
+						<li>Typcially achieve high levels of accuracy with relatively few degrees of freedom</li><br>
+						<li>Collocation methods are generally more efficient than Galerkin methods</li><br>
+					</ul>
+				</aside>
+				
 				</section>
 				
 				<section align="left">
@@ -966,6 +1027,14 @@
 				<div align="LEFT">
 				<p style="color:magenta"class="fragment" data-fragment-index="1"><b>Aim:</b> elucidate novel mechanisms for generating patterns</p>
 				</div>
+				
+				<aside class="notes">
+					<ul>
+						<li>Very little research in pattern forming in non-local models (particularly on curved geometries)</li><br>
+						<li>Recent results suggest possible curvature-induced behaviours</li>						
+					</ul>
+				</aside>
+				
 				</section>
 				
 				<section align="left">
@@ -993,6 +1062,14 @@
 				<div align="LEFT">
 				<p style="color:magenta"class="fragment" data-fragment-index="1"><b>Aim: investigate the role of geometry in the evolutionary shaping of brain function</b></p>
 				</div>
+				
+				<aside class="notes">
+					<ul>
+						<li>We have some ideas: (i) impact on travelling waves as a function of gyrification; (ii) heterogeneity of connectivity kernel; (iii) introduction of LR edges</li><br>						
+						<li>HELP!!!</li><br>
+					</ul>
+				</aside>
+								
 				</section>			
 				
 				<section align="left">
